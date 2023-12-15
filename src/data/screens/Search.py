@@ -232,21 +232,23 @@ class SearchVideos(MDScreen):
             kwargs.get("channel")["thumbnails"] = \
                 [{"url":"data/files/pre.png"}]
         
-        self.videolist.add_widget(
-            CardInfo(
-                thumbnail_channel=kwargs["channel"]["thumbnails"][0]["url"],
-                thumbnail_url=kwargs["thumbnails"][0]["url"],
-                channel_name=kwargs["channel"]["name"],
-                playlist_cont=kwargs["videoCount"],
-                views=kwargs["viewCount"]["short"],
-                on_release=self.runInfoScreen,
-                duration= kwargs["duration"],
-                playlist_videos=self.videos,
-                title=kwargs["title"],
-                link=kwargs ["link"],
-                type=kwargs["type"],
+        try:
+            self.videolist.add_widget(
+                CardInfo(
+                    thumbnail_channel=kwargs["channel"]["thumbnails"][0]["url"],
+                    thumbnail_url=kwargs["thumbnails"][0]["url"],
+                    channel_name=kwargs["channel"]["name"],
+                    playlist_cont=kwargs["videoCount"],
+                    views=kwargs["viewCount"]["short"],
+                    on_release=self.runInfoScreen,
+                    duration= kwargs["duration"],
+                    playlist_videos=self.videos,
+                    title=kwargs["title"],
+                    link=kwargs ["link"],
+                    type=kwargs["type"],
+                )
             )
-        )
+        except: pass
     
     def runInfoScreen(self, instance):
         if self.click_controll:

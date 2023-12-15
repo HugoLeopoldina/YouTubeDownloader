@@ -22,16 +22,16 @@ Este é um projeto em desenvolvimento de um aplicativo Android simples, criado e
 Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer alteração nos requisitos mencionados pode resultar em erros no aplicativo, estamos trabalhando para melhorá-lo e corrigir quaisquer problemas.
 
 # Uso
-+ Ao abrir o aplicativo, você verá uma entrada de texto que aceita o nome de vídeos ou playlists (não implementado) do YouTube, bem como os links correspondentes.
-+ Pasta de saída: /Download/YTDL
++ Ao abrir o aplicativo, você verá uma entrada de texto que aceita o nome de vídeos ou playlists (não implementado ainda) do YouTube, bem como os links correspondentes.
++ Pasta de saída: /Downloads/YTDL
 
-# Instalação
+# Execução
 + Considerando que você ja tenha instalado o Python3, é recomendado criar um ambiente virtual para instalar os pacotes necessários para a execução do programa para não interferir com as versões já instaladas no seu sistema.
 
 ### Windows
 + Na pasta raiz do projeto, crie um ambiente virtual
 ```
-python -m venv env
+python3 -m venv env
 ```
 + Abilite a execução de scripts PowerShell
 ```
@@ -43,9 +43,44 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 ```
 + Instale as dependencias necessárias
 ```
-.\install_dependencies.bat
+pip3 install -r requirements.txt
 ```
 + Execute o projeto
 ```
-.\env\Scripts\python.exe .\src\main.py
+.\env\Scripts\python3.exe .\src\main.py
+```
+
+### Linux
++ Na pasta raiz do projeto, crie um ambiente virtual
+```
+python3 -m venv env
+```
++ Ative o ambiente virtual (deve aparecer (env) antes do diretorio atual)
+```
+source ./env/bin/activate
+```
++ Instale as dependencias necessárias
+```
+pip3 install -r requirements.txt
+```
++ Execute o projeto
+```
+./env/bin/python3 ./src/main.py
+```
+
+# Binário
++ Para gerar um binário e compilar para uma plataforma específica será necessário o uso de algumas bibliotécas: [PyInstaller](https://pyinstaller.org/en/stable/) para Windows/Linux e [Buildozer](https://buildozer.readthedocs.io/en/latest/) para Android.
+
+### Windows/Linux
++ Instale a bibliotéca PyInstaller
+```
+pip3 install pyinstaller
+```
++ Navegue até a pasta **build** e execute o seguinte comando
+```
+*Linux*
+pyinstaller --name app-linux --onefile --add-data "data:data" --add-data "mainapp.kv:." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
+
+*Windows*
+pyinstaller --name app-win --onefile --add-data "data;data" --add-data "mainapp.kv;." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
 ```
