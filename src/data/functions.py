@@ -30,7 +30,6 @@ def load_kv(module):
                 return
     _modules.append(module)
     kv = f"{os.path.join(os.path.dirname(os.path.abspath(main.__file__)), *module.split('.'))}.kv"
-    print(kv)
     MDApp.get_running_app().KV_FILES.append(kv)
 
 def run_in_thread(func):
