@@ -47,7 +47,7 @@ pip3 install -r requirements.txt
 ```
 + Execute o projeto
 ```
-.\env\Scripts\python3.exe .\src\main.py
+.\env\Scripts\python.exe .\src\main.py
 ```
 
 ### Linux
@@ -68,7 +68,7 @@ pip3 install -r requirements.txt
 ./env/bin/python3 ./src/main.py
 ```
 
-# Binário
+# Compilação
 + Para gerar um binário e compilar para uma plataforma específica será necessário o uso de algumas bibliotécas: [PyInstaller](https://pyinstaller.org/en/stable/) para Windows/Linux e [Buildozer](https://buildozer.readthedocs.io/en/latest/) para Android.
 
 ### Windows/Linux
@@ -99,3 +99,9 @@ pyinstaller --name app-linux --onefile --add-data "data:data" --add-data "mainap
 ```
 buildozer android debug
 ```
++ O processo pode demonerar de 15 à 30 minutos, ao terminar o apk gerado estará na pasta **bin**
+
+# Download (mediafire)
++ [Android](https://www.mediafire.com/file/llhokxh68j2wpbn/YouTubeDL.apk/file)
++ [Windows](https://www.mediafire.com/file/dpnmtjm7rgzg5b0/YouTubeDL.exe/file)
++ [Linux](https://www.mediafire.com/file/x1j23pdjqh2g50s/YouTubeDL/file)
