@@ -1,0 +1,9 @@
+kivy==2.2.0.dev0
+pillow
+https://github.com/KivyMD/KivyMD/archive/master.zip
+watchdog
+pytube
+httpx
+youtube-search-python
+mutagen
+plyer

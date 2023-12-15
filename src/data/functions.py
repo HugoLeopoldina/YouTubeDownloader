@@ -21,13 +21,16 @@ app = MDApp.get_running_app()
 _snackbar = None
 _modules = []
 
+import main
+
 def load_kv(module):
     if _modules:
         for m in _modules:
             if module == m:
                 return
     _modules.append(module)
-    kv = f"{os.path.join(*module.split('.'))}.kv"
+    kv = f"{os.path.join(os.path.dirname(os.path.abspath(main.__file__)), *module.split('.'))}.kv"
+    print(kv)
     MDApp.get_running_app().KV_FILES.append(kv)
 
 def run_in_thread(func):

@@ -8,9 +8,10 @@
 
 #:import platform kivy.utils.platform
 #:import Window kivy.core.window.Window
+#:import os os
 
-#:set mainfont "data/files/seguiemj"
-#:set Mustica "data/files/Mustica"
+#:set mainfont f"{os.path.join(app.datadir, 'files', 'seguiemj')}"
+#:set Mustica f"{os.path.join(app.datadir, 'files', 'Mustica')}"
 
 <SM>:
     Main:

@@ -33,7 +33,12 @@ class SM(MDScreenManager):
             for screen in self.screens}
 
 class MainApp(MDApp):
-    AUTORELOADER_PATHS = ["main.py", "mainapp.kv", "data"]
+    current_path = os.path.dirname(os.path.abspath(__file__))
+    mainfile = os.path.join(current_path, "main.py")
+    mainappkv = os.path.join(current_path, "mainapp.kv")
+    datadir = os.path.join(current_path, "data")
+    
+    AUTORELOADER_PATHS = [mainfile, mainappkv, datadir]
     DEBUG = False if platform != "linux" else True
 
     current_sm = ObjectProperty(None)
@@ -45,7 +50,7 @@ class MainApp(MDApp):
 
         # Intervalo de 2MB
         request.default_range_size = 1048576
-        Loader.loading_image = "data/files/loading1.gif"
+        Loader.loading_image = os.path.join(self.datadir, "files", "loading1.gif")
 
     def build_app(self, first=False):
         self.set_theme()

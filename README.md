@@ -16,6 +16,7 @@ Este é um projeto em desenvolvimento de um aplicativo Android simples, criado e
 + Mutagen
 + Plyer
 + Certifi
++ watchdog
 
 # Aviso
 Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer alteração nos requisitos mencionados pode resultar em erros no aplicativo, estamos trabalhando para melhorá-lo e corrigir quaisquer problemas.
@@ -28,7 +29,23 @@ Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer al
 + Considerando que você ja tenha instalado o Python3, é recomendado criar um ambiente virtual para instalar os pacotes necessários para a execução do programa para não interferir com as versões já instaladas no seu sistema.
 
 ### Windows
-+ Instale o pacote para criação de ambiente virtual
++ Na pasta raiz do projeto, crie um ambiente virtual
 ```
-print("Hello")
+python -m venv env
+```
++ Abilite a execução de scripts PowerShell
+```
+Set-ExecutionPolicy Unrestricted -Scope Process
+```
++ Ative o ambiente virtual (deve aparecer (env) antes do diretorio atual)
+```
+.\env\Scripts\Activate.ps1
+```
++ Instale as dependencias necessárias
+```
+.\install_dependencies.bat
+```
++ Execute o projeto
+```
+.\env\Scripts\python.exe .\src\main.py
 ```
