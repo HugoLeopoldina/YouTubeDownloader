@@ -8,11 +8,11 @@ Este é um projeto em desenvolvimento de um aplicativo Android simples, criado e
 
 # Requisitos de Execução:
 + Python3
-+ PyTube
-+ Youtube-Search-Python
-+ Httpx
 + KivyMD (https://github.com/KivyMD/KivyMD/archive/master.zip)
 + Kivy (versão 2.2.0.dev0)
++ Youtube-Search-Python
++ PyTube
++ Httpx
 + Mutagen
 + Plyer
 + Certifi
@@ -25,5 +25,6 @@ Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer al
 + Pasta de saída: /Download/YTDL
 
 # Instalação
-+ Considerando que você ja tenha instalado o Python3 no site é recomendado criar um ambiente virtual para instalar os pacotes necessários para a execução do programa para não interferir com as versões já instaladas no seu sistema.
++ Considerando que você ja tenha instalado o Python3, é recomendado criar um ambiente virtual para instalar os pacotes necessários para a execução do programa para não interferir com as versões já instaladas no seu sistema.
 
+### Windows
