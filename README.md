@@ -28,3 +28,5 @@ Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer al
 + Considerando que você ja tenha instalado o Python3, é recomendado criar um ambiente virtual para instalar os pacotes necessários para a execução do programa para não interferir com as versões já instaladas no seu sistema.
 
 ### Windows
++ Instale o pacote para criação de ambiente virtual
+    print("Hello")
