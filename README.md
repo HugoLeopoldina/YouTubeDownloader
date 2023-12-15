@@ -76,11 +76,26 @@ pip3 install -r requirements.txt
 ```
 pip3 install pyinstaller
 ```
-+ Navegue até a pasta **build** e execute o seguinte comando
++ Navegue até a pasta **build** e execute o seguinte comando no Windows
 ```
-*Linux*
-pyinstaller --name app-linux --onefile --add-data "data:data" --add-data "mainapp.kv:." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
-
-*Windows*
 pyinstaller --name app-win --onefile --add-data "data;data" --add-data "mainapp.kv;." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
+```
++ Ou no Linux
+```
+pyinstaller --name app-linux --onefile --add-data "data:data" --add-data "mainapp.kv:." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
+```
++ Irá gerar uma pasta **build** e **dist**, basta executar o binário na pasta **dist** no windows
+```
+.\dist\app-win.exe
+```
++ Ou no Linux
+```
+./dist/app-linux
+```
+
+### Android
++ Para construir um apk apartir do python será necessário o sistema operacional Linux pois o [Buildozer](https://buildozer.readthedocs.io/en/latest/) é dependente de algumas bibliotécas ou ferramentas especificas para sistema Linux. Para superar essa incompatibilidade do Windows será necessário o uso do [Subsystem for Linux (WSL)](https://learn.microsoft.com/pt-br/windows/wsl/install).
++ Considerando que já esteja com um terminal linux em execução, siga as instruções de instalação do **buildozer** [aqui](https://buildozer.readthedocs.io/en/latest/installation.html), navegue até a pasta **src** e execute o comando
+```
+buildozer android debug
 ```
