@@ -1,3 +1,12 @@
+# Tópicos
++ [Visão geral](#visão-geral)
++ [Compatibilidades](#compatibilidade-testada)
++ [Avisos](#aviso)
++ [Uso](#uso)
++ [Execução](#execução)
++ [Compilação](#compilação)
++ [Downloads](#download-mediafire)
+
 # Visão geral
 Este é um projeto em desenvolvimento de um aplicativo Android simples, criado em Python com o uso do framework Kivy/KivyMD. O aplicativo permite a pesquisa e download de vídeos/músicas do YouTube, oferecendo uma funcionalidade principal bem desenvolvida. Por favor, esteja ciente de que o aplicativo ainda está em fase de desenvolvimento e pode conter erros. O código fonte não está documentado neste momento.
 
@@ -19,7 +28,7 @@ Este é um projeto em desenvolvimento de um aplicativo Android simples, criado e
 + watchdog
 
 # Aviso
-Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer alteração nos requisitos mencionados pode resultar em erros no aplicativo, estamos trabalhando para melhorá-lo e corrigir quaisquer problemas.
+Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer alteração nos requisitos mencionados pode resultar em erros no aplicativo, estamos trabalhando para melhorá-lo e corrigir quaisquer problemas. No Android recomendamos que permita o acesso ao armazenamento manualmente (acessando as informações do aplicativo nas configurações) caso necessário ou caso de erros ao efetuar algum download.
 
 # Uso
 + Ao abrir o aplicativo, você verá uma entrada de texto que aceita o nome de vídeos ou playlists (não implementado ainda) do YouTube, bem como os links correspondentes.
@@ -101,7 +110,7 @@ buildozer android debug
 ```
 + O processo pode demonerar de 15 à 30 minutos, ao terminar o apk gerado estará na pasta **bin**
 
-# Download (mediafire)
+# Downloads (mediafire)
 + [Android](https://www.mediafire.com/file/llhokxh68j2wpbn/YouTubeDL.apk/file)
 + [Windows](https://www.mediafire.com/file/dpnmtjm7rgzg5b0/YouTubeDL.exe/file)
 + [Linux](https://www.mediafire.com/file/x1j23pdjqh2g50s/YouTubeDL/file)
