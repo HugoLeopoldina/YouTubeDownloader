@@ -128,9 +128,8 @@ sudo apt update
 + Instale as bibliotécas e ferramentas necessária para a construção de um apk:
 
 ```
-sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
-pip3 install --user --upgrade Cython==0.29.33 virtualenv
-pip3 install --user --upgrade buildozer
+sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev;
+pip3 install --user --upgrade Cython==0.29.33 virtualenv buildozer
 ```
 
 + Adicione o diretório `~/.local/bin` (local onde o executável do buildozer está localizado) ao caminho `PATH` do distema:
