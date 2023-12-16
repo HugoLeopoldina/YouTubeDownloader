@@ -41,7 +41,9 @@ Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer al
 ### Windows
 
 + Na pasta raiz do projeto, crie um ambiente virtual:
-```python3 -m venv env```
+```
+python3 -m venv env
+```
 
 + Abilite a execução de scripts PowerShell:
 ```Set-ExecutionPolicy Unrestricted -Scope Process```
