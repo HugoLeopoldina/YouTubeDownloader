@@ -118,14 +118,7 @@ buildozer android debug
 
 
 # Demonstrações
-+ Pesquisa do vídeo
-![Pesquisa do vídeo](./demo/ytdl-demo.png)
-
-+ Informações do vídeo
-![Informações do vídeo](./demo/ytdl-demo2.png)
-
-+ Escolha de formato do arquivo
-![Escolha de formato de arquivo](./demo/ytdl-demo.png)
-
-+ Download
+![Pesquisa do vídeo](./demo/ytdl-demo.png)   
+![Informações do vídeo](./demo/ytdl-demo2.png)   
+![Escolha de formato de arquivo](./demo/ytdl-demo.png)   
 ![Download](./demo/ytdl-demo2.png)
