@@ -85,7 +85,7 @@ pip3 install -r requirements.txt
 ```
 pip3 install pyinstaller
 ```
-+ Navegue até a pasta **build** e execute o seguinte comando no Windows
++ Navegue até a pasta [build](./build/) e execute o seguinte comando no Windows
 ```
 pyinstaller --name app-win --onefile --add-data "data;data" --add-data "mainapp.kv;." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
 ```
