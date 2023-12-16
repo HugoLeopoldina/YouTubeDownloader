@@ -115,4 +115,4 @@ buildozer android debug
 + [Windows](https://www.mediafire.com/file/dpnmtjm7rgzg5b0/YouTubeDL.exe/file)
 + [Linux](https://www.mediafire.com/file/x1j23pdjqh2g50s/YouTubeDL/file)
 
-![Teste](./ytdl-demo.png)
+![Teste](./demo/ytdl-demo.png)![Teste2](./demo/ytdl-demo2.png)![Teste](./demo/ytdl-demo.png)![Teste2](./demo/ytdl-demo2.png)
