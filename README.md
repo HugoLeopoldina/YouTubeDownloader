@@ -9,6 +9,7 @@ Este é um projeto em desenvolvimento de um aplicativo Android simples, criado e
 + [Execução](#execução)
 + [Compilação](#compilação)
 + [Downloads](#downloads-mediafire)
++ [Demonstrações](#demonstrações)
 
 # Compatibilidade Testada:
 + Android (10, 14)
@@ -115,4 +116,16 @@ buildozer android debug
 + [Windows](https://www.mediafire.com/file/dpnmtjm7rgzg5b0/YouTubeDL.exe/file)
 + [Linux](https://www.mediafire.com/file/x1j23pdjqh2g50s/YouTubeDL/file)
 
-![Teste](./demo/ytdl-demo.png)   ![Teste2](./demo/ytdl-demo2.png)   ![Teste](./demo/ytdl-demo.png)   ![Teste2](./demo/ytdl-demo2.png)
+
+# Demonstrações
++ Pesquisa do vídeo
+![Pesquisa do vídeo](./demo/ytdl-demo.png)
+
++ Informações do vídeo
+![Informações do vídeo](./demo/ytdl-demo2.png)
+
++ Escolha de formato do arquivo
+![Escolha de formato de arquivo](./demo/ytdl-demo.png)
+
++ Download
+![Download](./demo/ytdl-demo2.png)
