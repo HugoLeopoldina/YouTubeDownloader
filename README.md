@@ -39,77 +39,75 @@ Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer al
 + Considerando que você ja tenha instalado o Python3, é recomendado criar um ambiente virtual para instalar os pacotes necessários para a execução do programa para não interferir com as versões já instaladas no seu sistema.
 
 ### Windows
+
 + Na pasta raiz do projeto, crie um ambiente virtual
-```
-python3 -m venv env
-```
+`python3 -m venv env`
+
 + Abilite a execução de scripts PowerShell
-```
-Set-ExecutionPolicy Unrestricted -Scope Process
-```
+`Set-ExecutionPolicy Unrestricted -Scope Process`
+
 + Ative o ambiente virtual (deve aparecer (env) antes do diretorio atual)
-```
-.\env\Scripts\Activate.ps1
-```
+`.\env\Scripts\Activate.ps1`
+
 + Instale as dependencias necessárias
-```
-pip3 install -r requirements.txt
-```
+`pip3 install -r requirements.txt`
+
 + Com o interpretador do ambiente virtual, execute o arquivo [principal](./src/main.py)
-```
-.\env\Scripts\python.exe .\src\main.py
-```
+`.\env\Scripts\python.exe .\src\main.py`
 
 ### Linux
 + Na pasta raiz do projeto, crie um ambiente virtual
-```
-python3 -m venv env
-```
+`python3 -m venv env`
+
 + Ative o ambiente virtual (deve aparecer (env) antes do diretorio atual)
-```
-source ./env/bin/activate
-```
+`source ./env/bin/activate`
+
 + Instale as dependencias necessárias
-```
-pip3 install -r requirements.txt
-```
+`pip3 install -r requirements.txt`
+
 + Com o interpretador do ambiente virtual, execute o arquivo [principal](./src/main.py)
-```
-./env/bin/python3 ./src/main.py
-```
+`./env/bin/python3 ./src/main.py`
 
 # Compilação
 + Para gerar um binário e compilar para uma plataforma específica será necessário o uso de algumas bibliotécas: [PyInstaller](https://pyinstaller.org/en/stable/) para Windows/Linux e [Buildozer](https://buildozer.readthedocs.io/en/latest/) para Android.
 
 ### Windows/Linux
 + Instale a bibliotéca PyInstaller
-```
-pip3 install pyinstaller
-```
+`pip3 install pyinstaller`
+
 + Navegue até a pasta [build](./build/) (`cd build`) e execute o seguinte comando no Windows
-```
-pyinstaller --name app-win --onefile --add-data "data;data" --add-data "mainapp.kv;." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
-```
+`pyinstaller --name app-win --onefile --add-data "data;data" --add-data "mainapp.kv;." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py`
+
 + Ou no Linux
-```
-pyinstaller --name app-linux --onefile --add-data "data:data" --add-data "mainapp.kv:." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
-```
+`pyinstaller --name app-linux --onefile --add-data "data:data" --add-data "mainapp.kv:." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py`
+
 + Irá gerar uma pasta **build** e **dist**, basta executar o binário na pasta **dist** no windows
-```
-.\dist\app-win.exe
-```
+`.\dist\app-win.exe`
+
 + Ou no Linux
-```
-./dist/app-linux
-```
+`./dist/app-linux`
 
 ### Android
-+ Para construir um apk apartir do python será necessário o sistema operacional Linux pois o [Buildozer](https://buildozer.readthedocs.io/en/latest/) é dependente de algumas bibliotécas ou ferramentas especificas para sistema Linux. Para superar essa incompatibilidade do Windows será necessário o uso do [Subsystem for Linux (WSL)](https://learn.microsoft.com/pt-br/windows/wsl/install).
-+ Considerando que já esteja com um terminal linux em execução, siga as instruções de instalação do **buildozer** [aqui](https://buildozer.readthedocs.io/en/latest/installation.html), navegue até a pasta [src](./src/) e execute o seguinte comando:
-```
-buildozer android debug
-```
-+ O processo pode demonerar de 15 à 30 minutos, ao terminar o apk gerado estará na pasta **bin**
++ Para construir um apk apartir do python será necessário o sistema operacional Linux pois o [Buildozer](https://buildozer.readthedocs.io/en/latest/) é dependente de algumas bibliotécas e ferramentas especificas para sistema Linux. Para superar essa incompatibilidade do Windows será necessário o uso do [Subsystem for Linux (WSL)](https://learn.microsoft.com/pt-br/windows/wsl/install) porém um pouco mais lento do que um sistema operacional Linux real.
+
++ Considerando que já esteja com um terminal linux em execução, siga as instruções de instalação e execução do [Buildozer](https://buildozer.readthedocs.io/en/latest/installation.html)
+
++ Atualize a lista de pacotes disponíveis para instalação:
+`sudo apt update`
+
++ Instale as bibliotécas e ferramentas necessária para a contrução do apk:
+
+`sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev`
+`pip3 install --user --upgrade Cython==0.29.33 virtualenv`
+`pip3 install --user --upgrade buildozer`
+
++ Adicione o diretório `~/.local/bin` (local onde o executável do buildozer está localizado) ao caminho PATH do distema:
+`PATH=$PATH:~/.local/bin/`
+
++ Na raiz do projeto, navegue até a pasta [src](./src/) e execute o seguinte comando:
+`buildozer android debug`
+
++ O processo pode demonerar de 15 à 30 minutos, ao terminar o apk gerado estará em uma pasta chamada **bin**
 
 # Downloads (mediafire)
 + [Android](https://www.mediafire.com/file/llhokxh68j2wpbn/YouTubeDL.apk/file)
