@@ -145,6 +145,9 @@ buildozer android debug
 + O processo pode demonerar de 15 à 30 minutos, ao terminar, o apk gerado estará em uma pasta chamada **bin**
 
 # Downloads (mediafire)
+> [!WARNING]
+> Ocasionalmente, alguns antivírus podem detectar falsos positivos. Se o seu antivírus relatar que o binário é potencialmente prejudicial, recomendamos que desative temporáriamente o anti-vírus ou compile o programa manualmente como ensinado anteriormente.
+
 + [Android](https://www.mediafire.com/file/llhokxh68j2wpbn/YouTubeDL.apk/file)
 + [Windows](https://www.mediafire.com/file/dpnmtjm7rgzg5b0/YouTubeDL.exe/file)
 + [Linux](https://www.mediafire.com/file/x1j23pdjqh2g50s/YouTubeDL/file)
