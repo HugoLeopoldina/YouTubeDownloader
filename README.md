@@ -31,7 +31,7 @@ Este é um projeto em desenvolvimento de um aplicativo Android simples, criado e
 Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer alteração nos requisitos mencionados pode resultar em erros no aplicativo, estamos trabalhando para melhorá-lo e corrigir quaisquer problemas. No Android recomendamos que permita o acesso ao armazenamento manualmente (acessando as informações do aplicativo nas configurações) caso necessário ou caso de erros ao efetuar algum download.
 
 # Uso
-+ Ao abrir o aplicativo, você verá uma entrada de texto que aceita o nome de vídeos ou playlists (não implementado ainda) do YouTube, bem como os links correspondentes.
++ Ao abrir o aplicativo, você verá uma entrada de texto que aceita o nome de vídeos ou playlists (downloads de playlists não implementado ainda) do YouTube, bem como os links correspondentes.
 + Pasta de saída: /Downloads/YTDL
 
 # Execução
@@ -54,7 +54,7 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 ```
 pip3 install -r requirements.txt
 ```
-+ Execute o projeto
++ Com o interpretador do ambiente virtual, execute o arquivo [principal](./src/main.py)
 ```
 .\env\Scripts\python.exe .\src\main.py
 ```
@@ -72,7 +72,7 @@ source ./env/bin/activate
 ```
 pip3 install -r requirements.txt
 ```
-+ Execute o projeto
++ Com o interpretador do ambiente virtual, execute o arquivo [principal](./src/main.py)
 ```
 ./env/bin/python3 ./src/main.py
 ```
@@ -85,7 +85,7 @@ pip3 install -r requirements.txt
 ```
 pip3 install pyinstaller
 ```
-+ Navegue até a pasta [build](./build/) e execute o seguinte comando no Windows
++ Navegue até a pasta [build](./build/) (`cd build`) e execute o seguinte comando no Windows
 ```
 pyinstaller --name app-win --onefile --add-data "data;data" --add-data "mainapp.kv;." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
 ```
@@ -104,7 +104,7 @@ pyinstaller --name app-linux --onefile --add-data "data:data" --add-data "mainap
 
 ### Android
 + Para construir um apk apartir do python será necessário o sistema operacional Linux pois o [Buildozer](https://buildozer.readthedocs.io/en/latest/) é dependente de algumas bibliotécas ou ferramentas especificas para sistema Linux. Para superar essa incompatibilidade do Windows será necessário o uso do [Subsystem for Linux (WSL)](https://learn.microsoft.com/pt-br/windows/wsl/install).
-+ Considerando que já esteja com um terminal linux em execução, siga as instruções de instalação do **buildozer** [aqui](https://buildozer.readthedocs.io/en/latest/installation.html), navegue até a pasta **src** e execute o comando
++ Considerando que já esteja com um terminal linux em execução, siga as instruções de instalação do **buildozer** [aqui](https://buildozer.readthedocs.io/en/latest/installation.html), navegue até a pasta [src](./src/) e execute o seguinte comando:
 ```
 buildozer android debug
 ```
@@ -114,3 +114,5 @@ buildozer android debug
 + [Android](https://www.mediafire.com/file/llhokxh68j2wpbn/YouTubeDL.apk/file)
 + [Windows](https://www.mediafire.com/file/dpnmtjm7rgzg5b0/YouTubeDL.exe/file)
 + [Linux](https://www.mediafire.com/file/x1j23pdjqh2g50s/YouTubeDL/file)
+
+![Teste](./ytdl-demo.png)
