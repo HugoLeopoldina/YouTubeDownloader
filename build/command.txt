@@ -1,5 +1,0 @@
-
-LINUX: pyinstaller --name app-linux --onefile --add-data "data:data" --add-data "mainapp.kv:." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py
-
-
-WINDOWS: pyinstaller --name app-win --onefile --add-data "data;data" --add-data "mainapp.kv;." --hidden-import httpx --hidden-import youtubesearchpython --hidden-import mutagen --hidden-import plyer main.py

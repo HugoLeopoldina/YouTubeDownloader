@@ -38,9 +38,9 @@ Seu funcionamento depende da bibliotéca PyTube e da API do YouTube. Qualquer al
 # Execução
 + Considerando que você ja tenha instalado o Python3, é recomendado criar um ambiente virtual para instalar os pacotes necessários para a execução do programa para não interferir com as versões já instaladas no seu sistema.
 
-### Windows
+### Windows (PowerShell)
 
-+ Na pasta raiz do projeto, crie um ambiente virtual:
++ Navegue até pasta raiz do projeto e crie um ambiente virtual:
 ```
 python3 -m venv env
 ```
@@ -66,7 +66,7 @@ pip3 install -r requirements.txt
 ```
 
 ### Linux
-+ Na pasta raiz do projeto, crie um ambiente virtual:
++ Navegue até a pasta raiz do projeto e crie um ambiente virtual:
 ```
 python3 -m venv env
 ```

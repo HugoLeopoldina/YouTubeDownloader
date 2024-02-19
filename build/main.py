@@ -54,8 +54,6 @@ class MainApp(MDApp):
 
         # Intervalo de 2MB
         request.default_range_size = 1048576
-        Loader.loading_image = \
-            os.path.join(self.main_path, "data", "files", "loading1.gif")
 
     def build(self):
         self.set_theme()

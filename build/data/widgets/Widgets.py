@@ -274,12 +274,7 @@ class DownloadDialog(MDDialog):
             title="Preparing, please wait",
         ); self.rl = MDRelativeLayout()
 
-        self.rl.add_widget(FitImage(
-            source="data/files/loading.png",
-            pos_hint={"right":.97, "center_y":.5},
-            size_hint=(None, None),
-            size=(dp(45), dp(45))
-        )); self.loadingDialog.add_widget(self.rl)
+        self.loadingDialog.add_widget(self.rl)
 
         self.content = DownloadDialogContent()
         super(DownloadDialog, self).__init__(**kwargs)
@@ -434,7 +429,6 @@ class DownloadDialog(MDDialog):
         @run_in_thread
         def _run(*_):
             self.filename = f"{self.instance.title}.{self.format}"
-            
             caminho_formatado = re.sub(r'[\\/*?:"<>|]', '_', self.filename)
             
             # Normalizar o caminho para garantir barras no formato correto

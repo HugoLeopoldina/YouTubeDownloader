@@ -1,4 +1,4 @@
-import os
+import os, re
 from math import trunc
 from threading import Thread
 from urllib.request import urlopen
@@ -433,7 +433,8 @@ class DownloadDialog(MDDialog):
         @run_in_thread
         def _run(*_):
             self.filename = f"{self.instance.title}.{self.format}"
-
+            self.filename = re.sub(r'[\\/*?:"<>|]', '_', self.filename)
+            
             if platform == "android":
                 def _run(*_):
                     def _download(*_):
