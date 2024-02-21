@@ -1,9 +1,7 @@
-# Visão geral
-Este é um projeto em desenvolvimento de um aplicativo Android simples, criado em Python com o uso do framework Kivy/KivyMD. O aplicativo permite a pesquisa e download de vídeos/músicas do YouTube, oferecendo uma funcionalidade principal bem desenvolvida. Por favor, esteja ciente de que o aplicativo ainda está em fase de desenvolvimento e pode conter erros. O código fonte não está documentado neste momento.
-
 # Tópicos
 + [Visão geral](#visão-geral)
 + [Compatibilidades](#compatibilidade-testada)
++ [Requisitos](#requisitos-de-execução)
 + [Avisos](#aviso)
 + [Uso](#uso)
 + [Execução](#execução)
@@ -11,15 +9,18 @@ Este é um projeto em desenvolvimento de um aplicativo Android simples, criado e
 + [Downloads](#downloads-mediafire)
 + [Demonstrações](#demonstrações)
 
-# Compatibilidade Testada:
-+ Android (10, 14)
-+ Windows (10, 11)
+# Visão geral
+Este é um projeto em desenvolvimento de um aplicativo Android simples, criado em Python com o uso do framework Kivy/KivyMD. O aplicativo permite a pesquisa e download de vídeos/músicas do YouTube, oferecendo uma funcionalidade principal bem desenvolvida. Por favor, esteja ciente de que o aplicativo ainda está em fase de desenvolvimento e pode conter erros. O código fonte não está documentado neste momento.
+
+# Compatibilidade testada:
++ Android 10 e 14
++ Windows 10 e 11
 + Linux
 
-# Requisitos de Execução:
-+ Python3
-+ KivyMD (https://github.com/KivyMD/KivyMD/archive/master.zip)
-+ Kivy (versão 2.2.0.dev0)
+# Requisitos de execução:
++ Python 3
++ KivyMD (1.2.0.dev0)
++ Kivy (2.2.0.dev0)
 + Youtube-Search-Python
 + PyTube
 + Httpx
